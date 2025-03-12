@@ -1,0 +1,42 @@
+@import "../shared-styles/variables";
+
+:host {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  grid-template-columns: 2fr 3fr;
+}
+
+h1 {
+  color: #f3f6fc;
+  margin-bottom: 1rem;
+  position: absolute;
+  width: 100%;
+  bottom: 75px;
+}
+
+.about-me-content-container {
+  display: grid;
+  gap: 5px;
+  color: $text-color;
+}
+
+.wrapper {
+  width: 200px;
+  justify-self: center;
+  text-align: center;
+  position: relative;
+}
+
+svg {
+  margin: 0 auto;
+  width: 200px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  :host {
+    grid-template-columns: unset;
+  }
+}

@@ -1,0 +1,42 @@
+<div class="contact-section">
+  <h1 class="contact-title">Get In Touch</h1>
+  <div class="contact-info">
+    <div class="contact-item">
+      <i class="fa-solid fa-envelope"></i>
+      <p>{{ contactInfo.email }}</p>
+    </div>
+    <div class="contact-item">
+      <i class="fa-solid fa-phone"></i>
+      <p>{{ contactInfo.phone }}</p>
+    </div>
+    <div class="contact-item">
+      <i class="fa-solid fa-map-marker-alt"></i>
+      <p>{{ contactInfo.address }}</p>
+    </div>
+  </div>
+  <div class="social-media">
+    <div class="social-links">
+      <a [href]="contactInfo.socialMedia.linkedin"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Contact Linkedin"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a [href]="contactInfo.socialMedia.github"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Contact Github"
+      >
+        <i class="fab fa-github"></i>
+      </a>
+      <a [href]="contactInfo.socialMedia.telegram"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Contact Telegram"
+      >
+        <i class="fab fa-telegram"></i>
+      </a>
+    </div>
+  </div>
+</div>

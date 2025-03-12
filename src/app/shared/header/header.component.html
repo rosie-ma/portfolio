@@ -1,0 +1,31 @@
+<header>
+  <div class="logo">
+    <a href="#home" (click)="scrollToSection('home')">
+      Ro<span>s</span>ie's Portfolio
+    </a>
+  </div>
+  <div class="nav-menu-container">
+    <nav [class.active]="isMenuOpen">
+      <ul>
+        <li><a [class.active]="activeSection === 'home'" (click)="scrollToSection('home')">Home</a></li>
+        <li><a [class.active]="activeSection === 'about'" (click)="scrollToSection('about')">About</a></li>
+        <li><a [class.active]="activeSection === 'skills'" (click)="scrollToSection('skills')">Skills</a></li>
+        <li><a [class.active]="activeSection === 'experience'" (click)="scrollToSection('experience')">Experience</a>
+        </li>
+        <li><a [class.active]="activeSection === 'portfolio'" (click)="scrollToSection('portfolio')">Portfolio</a></li>
+        <li><a [class.active]="activeSection === 'contact'" (click)="scrollToSection('contact')">Contact</a></li>
+      </ul>
+    </nav>
+    <app-theme-toggle/>
+    <button
+      class="hamburger"
+      aria-label="Toggle menu"
+      (click)="toggleMenu()"
+      [class.active]="isMenuOpen"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>

@@ -1,0 +1,88 @@
+@import "../shared-styles/variables";
+
+:host {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.skills-heading {
+  margin: 0 auto 3rem auto;
+}
+
+h1 {
+  color: $primary-color;
+  text-align: center;
+}
+
+.hint {
+  color: $accent-color;
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+.slider-track {
+  display: inline-flex;
+  gap: 2rem;
+  animation: slide 20s linear infinite;
+
+  &.paused {
+    animation-play-state: paused;
+  }
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  gap: 1rem;
+  width: 100px;
+  position: relative;
+  color: $text-color;
+}
+
+.skill-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.skill-name {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.skill-popup {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $primary-color;
+  color: $background-color;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease, visibility .3s ease;
+}
+
+.skill-item:hover .skill-popup {
+  opacity: 1;
+  visibility: visible;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

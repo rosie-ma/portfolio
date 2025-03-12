@@ -1,0 +1,17 @@
+<h1>Portfolio</h1>
+<div class="portfolio-grid">
+  @for (item of portfolioItems; track item.name; let index = $odd) {
+    <div class="portfolio-item" [class.odd]="index">
+      <div class="portfolio-content">
+        <div class="heading-container">
+          <h2 class="portfolio-name">{{ item.name }}</h2>
+          <a href="{{ item.url }}" target="_blank">
+            <button aria-label="Visit websites" class="gradient-button">Visit Website</button>
+          </a>
+        </div>
+        <p class="portfolio-description">{{ item.description }}</p>
+      </div>
+        <iframe [title]="item.name" [src]="item.url | safeUrl" loading="lazy" class="portfolio-iframe"></iframe>
+    </div>
+  }
+</div>

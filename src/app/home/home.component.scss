@@ -1,0 +1,113 @@
+@import "../shared-styles/variables";
+
+:host {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2em;
+  margin-top: 5rem;
+}
+
+.image-container {
+  background-size: 200px 200px;
+  border-radius: 80% 20% 32% 68% / 58% 22% 78% 42%;
+  box-shadow: 10px 5px 10px $accent-color;
+  height: 200px;
+  width: 200px;
+  background-image: url('../../assets/images/cv-picture.jpg');
+}
+
+.code-editor {
+  background-color: $primary-color;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 400px;
+  width: 100%;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+
+  .action-header {
+    background-color: $primary-color;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 6px;
+
+      &.red {
+        background-color: #ff5f56;
+      }
+
+      &.yellow {
+        background-color: #ffbd2e;
+      }
+
+      &.green {
+        background-color: #27c93f;
+      }
+    }
+  }
+
+  .code {
+    display: flex;
+    color: $secondary-color;
+
+    .keyword {
+      color: #569cd6;
+    }
+
+    .string {
+      color: #9f6750;
+    }
+
+    .boolean {
+      color: #569cd6;
+    }
+
+    .operator {
+      color: #d4d4d4;
+    }
+  }
+}
+
+.gradient-button {
+  background: linear-gradient(45deg, #8375ce, #dea3ff);
+  color: white;
+  margin-top: 1rem;
+  padding: 15px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+}
+
+.gradient-button:hover {
+  background: linear-gradient(90deg, #8375ce, #dea3ff);
+}
+
+.about-me-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+  width: 30%;
+}
+
+
+@media (max-width: 768px) {
+  :host {
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+
+  .about-me-container {
+    width: 80%;
+    align-items: center;
+    text-align: center;
+  }
+}

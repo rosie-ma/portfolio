@@ -1,0 +1,21 @@
+:root {
+  --text: #192229;
+  --background: #f3f6fc;
+  --primary: #27233e;
+  --secondary: #c0b4ca;
+  --accent: #8375ce;
+}
+
+[data-theme="dark"] {
+  --text: #d6dfe6;
+  --background: #030a17;
+  --primary: #c5c1dc;
+  --secondary: #41354b;
+  --accent: #dea3ff;
+}
+
+$background-color: var(--background);
+$text-color: var(--text);
+$primary-color: var(--primary);
+$secondary-color: var(--secondary);
+$accent-color: var(--accent);

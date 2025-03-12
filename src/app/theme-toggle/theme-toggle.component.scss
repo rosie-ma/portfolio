@@ -1,0 +1,11 @@
+@import '../shared-styles/variables';
+
+.toggle-button {
+  background-color: transparent;
+  border: none;
+
+  i {
+    color: $accent-color;
+    font-size: 30px;
+  }
+}

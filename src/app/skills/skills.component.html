@@ -1,0 +1,39 @@
+<div class="skills-heading">
+  <h1>Skills</h1>
+  <p class="hint">hover on interested skill</p>
+</div>
+<div
+  class="slider-container"
+  (mouseenter)="onHover()"
+  (mouseleave)="onLeave()"
+>
+  <div class="slider-track" [class.paused]="isHovered">
+    @for (skill of skills; track skill.name) {
+      <div class="skill-item">
+        <img
+          class="skill-icon"
+          loading="lazy"
+          [src]="skill.icon"
+          [alt]="skill.name"
+        />
+        <span class="skill-name">{{ skill.name }}</span>
+        <div class="skill-popup">
+          {{ skill.experience }}
+        </div>
+      </div>
+    }
+    @for (skill of skills; track skill.name) {
+      <div class="skill-item">
+        <img
+          class="skill-icon"
+          [src]="skill.icon"
+          [alt]="skill.name"
+        />
+        <span class="skill-name">{{ skill.name }}</span>
+        <div class="skill-popup">
+          {{ skill.experience }}
+        </div>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,58 @@
+@import "../shared-styles/variables";
+
+.contact-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-title {
+  color: $primary-color;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 18px;
+  color: #333;
+
+  i {
+    color: $accent-color;
+    font-size: 24px;
+  }
+}
+
+.social-media {
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    a {
+      color: $text-color;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $secondary-color;
+      }
+
+      i {
+        font-size: 32px;
+      }
+    }
+  }
+}

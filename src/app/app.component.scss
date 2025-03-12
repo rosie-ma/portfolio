@@ -1,0 +1,20 @@
+main {
+  display: grid;
+  gap: 7rem;
+  width: 85%;
+  margin: 80px auto 0 auto;
+  position: relative;
+  z-index: 50;
+}
+
+@media (max-width: 768px) {
+  main {
+    width: 77%;
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    width: 95%;
+  }
+}
