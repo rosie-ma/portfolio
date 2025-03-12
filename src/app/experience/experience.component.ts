@@ -33,7 +33,7 @@ export class ExperienceComponent {
         },
         {
           projectItemHead: "Working with TypeScript and Angular",
-          projectInfo: ": Gained hands-on experience with TypeScript and Angular. In the last few months, I have been deepening my knowledge of Angular and continue to actively learn and improve my skills in this area"
+          projectInfo: "Gained hands-on experience with TypeScript and Angular. In the last few months, I have been deepening my knowledge of Angular and continue to actively learn and improve my skills in this area"
         }
       ]
     },
