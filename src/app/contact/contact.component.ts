@@ -13,7 +13,7 @@ export class ContactComponent {
     address: 'Yerevan | Armenia',
     socialMedia: {
       linkedin: 'https://www.linkedin.com/in/rosie-manukyan',
-      github: 'https://github.com/your-profile',
+      github: 'https://github.com/rosie-ma',
       telegram: 'https://t.me/Rosie_Kh',
     },
   };
