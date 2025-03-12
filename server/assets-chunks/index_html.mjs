@@ -1,7 +1,7 @@
 export default `<!DOCTYPE html><html lang="en" data-beasties-container><head>
   <meta charset="utf-8">
   <title>Rosie Manukyan | FrontEnd Developer | Portfolio</title>
-  <base href="/PortfolioWebsite/">
+  <base href="/portfolio/">
   <meta property="og:title" content="Rosie Manukyan | FrontEnd Developer | Portfolio">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Rosie Manukyan FrontEnd Developer &amp; UI/UX Designer. Explore my portfolio showcasing web development, design projects, and creative solutions. Let's build something amazing together!">
