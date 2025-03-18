@@ -1,6 +1,7 @@
 :root {
   --text: #192229;
   --background: #f3f6fc;
+  --background-header: 243, 246, 252;
   --primary: #27233e;
   --secondary: #c0b4ca;
   --accent: #8375ce;
@@ -9,12 +10,14 @@
 [data-theme="dark"] {
   --text: #d6dfe6;
   --background: #030a17;
+  --background-header: 3, 10, 23;
   --primary: #c5c1dc;
   --secondary: #41354b;
   --accent: #dea3ff;
 }
 
 $background-color: var(--background);
+$background-header: var(--background-header);
 $text-color: var(--text);
 $primary-color: var(--primary);
 $secondary-color: var(--secondary);
