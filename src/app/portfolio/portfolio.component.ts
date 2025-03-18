@@ -18,6 +18,11 @@ export class PortfolioComponent {
       url: 'https://microbiz.com/',
     },
     {
+      name: 'My Portfolio',
+      description: 'My portfolio website is a showcase of my work as a front-end developer, featuring a clean and modern design with both light and dark themes. It highlights my skills, projects, and experience. Built for an intuitive and engaging experience, it reflects my passion for creating beautiful and functional web applications',
+      url: 'https://rosiemanukyan-portfolio.vercel.app/',
+    },
+    {
       name: 'Single-Page Website',
       description: 'Responsive website built with a focus on simplicity and user experience. The design which is done by me is optimized for mobile and desktop devices, ensuring fast loading times and a seamless browsing experience.',
       url: 'https://htgroup.am/',
