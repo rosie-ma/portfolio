@@ -19,7 +19,7 @@ export class PortfolioComponent {
     },
     {
       name: 'My Portfolio',
-      description: 'My portfolio website is a showcase of my work as a front-end developer, featuring a clean and modern design with both light and dark themes. It highlights my skills, projects, and experience. Built for an intuitive and engaging experience, it reflects my passion for creating beautiful and functional web applications',
+      description: 'My portfolio website is a showcase of my work as a front-end developer, featuring a clean and modern design with both light and dark themes. It highlights my skills, projects, and experience. Built for an intuitive and engaging experience, it reflects my passion for creating beautiful and functional web applications. Website is designed and implemented by me using HTML5 SCSS and Angular JS.',
       url: 'https://rosiemanukyan-portfolio.vercel.app/',
     },
     {
