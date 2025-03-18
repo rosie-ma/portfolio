@@ -97,6 +97,42 @@
   width: 30%;
 }
 
+.animated-text {
+  display: inline-flex;
+  position: relative;
+  letter-spacing: 0.3rem;
+  color: #8375ce;
+  text-transform: uppercase;
+}
+
+.animated-text::before {
+  visibility: hidden;
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  color: #dea3ff;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: text-animate 7s ease-in-out 1;
+  border-right: 2px solid #dea3ff;
+}
+
+@keyframes text-animate {
+  0% {
+    visibility: visible;
+    width: 0;
+  }
+  50% {
+    visibility: visible;
+    width: 100%;
+  }
+  100% {
+    visibility: visible;
+    width: 0;
+  }
+}
 
 @media (max-width: 768px) {
   :host {
@@ -109,5 +145,12 @@
     width: 80%;
     align-items: center;
     text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-text::before {
+    animation: none;
+    width: 100%;
   }
 }
