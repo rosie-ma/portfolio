@@ -1,4 +1,4 @@
-import {Component, HostListener, Renderer2} from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 import {ThemeToggleComponent} from '../../theme-toggle/theme-toggle.component';
 
 @Component({

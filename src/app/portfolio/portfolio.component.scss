@@ -19,10 +19,6 @@ h1 {
   grid-template-columns: 1fr 2fr;
 }
 
-.portfolio-item.odd {
-  direction: rtl;
-}
-
 .heading-container {
   display: flex;
   justify-content: space-between;
@@ -30,10 +26,10 @@ h1 {
 
 .portfolio-iframe {
   width: 100%;
-  height: 900px;
+  height: 700px;
   border: none;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 8px $primary-color;
   transform-origin: 0 0;
   zoom: .5;
 }
@@ -55,18 +51,12 @@ h1 {
   color: $accent-color;
   font-size: 24px;
   font-weight: bold;
-  direction: ltr;
 }
 
 .portfolio-description {
-  font-size: 16px;
+  font-size: 14px;
   color: #666;
   line-height: 1.6;
-  direction: ltr;
-}
-
-.portfolio-link {
-  direction: ltr;
 }
 
 .gradient-button {

@@ -1,7 +1,7 @@
 <h1>Portfolio</h1>
 <div class="portfolio-grid">
-    @for (item of portfolioItems; track item.name; let index = $odd) {
-        <div class="portfolio-item" [class.odd]="index">
+    @for (item of portfolioItems; track item.name;) {
+        <div class="portfolio-item">
             <div class="portfolio-content">
                 <h2 class="portfolio-name">{{ item.name }}</h2>
                 <p class="portfolio-description">{{ item.description }}</p>
