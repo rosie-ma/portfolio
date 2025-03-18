@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {ChangeDetectorRef, Component, HostListener} from '@angular/core';
 import {HeaderComponent} from './shared/header/header.component';
 import {HomeComponent} from './home/home.component';
 import {AboutComponent} from './about/about.component';
@@ -24,5 +24,14 @@ import {InTouchComponent} from './shared/in-touch/in-touch.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  isScrolled = false;
 
+  constructor(private cd: ChangeDetectorRef) {}
+
+  @HostListener('document:scroll', [])
+  onWindowScroll(): void {
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    this.isScrolled = scrollPosition > 50;
+    this.cd.detectChanges();
+  }
 }
