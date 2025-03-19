@@ -80,3 +80,13 @@
 .custom-shape-container .shape-fill {
   fill: $primary-color;
 }
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 140px 20px 40px 20px;
+  }
+
+  .custom-shape-container svg {
+    height: 130px;
+  }
+}
