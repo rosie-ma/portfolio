@@ -1,8 +1,10 @@
 @import "../shared-styles/variables";
 
-h1 {
+.experience-heading {
   color: $primary-color;
   margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.4rem;
   text-align: center;
 }
 
@@ -59,6 +61,8 @@ h1 {
 }
 
 .project-heading {
+  font-size: 16px;
+  font-weight: bold;
   margin-top: 10px;
 }
 
@@ -67,7 +71,7 @@ h1 {
 }
 
 .timeline-year {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: bold;
   margin-bottom: 8px;
 }

@@ -1,9 +1,9 @@
-<h1>Portfolio</h1>
+<p class="portfolio-heading">Portfolio</p>
 <div class="portfolio-grid">
     @for (item of portfolioItems; track item.name;) {
         <div class="portfolio-item">
             <div class="portfolio-content">
-                <h2 class="portfolio-name">{{ item.name }}</h2>
+                <p class="portfolio-name">{{ item.name }}</p>
                 <p class="portfolio-description">{{ item.description }}</p>
                 <a class="portfolio-link" href="{{ item.url }}" target="_blank">
                     <button aria-label="Visit websites" class="gradient-button">Visit Website</button>

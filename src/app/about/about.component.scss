@@ -8,9 +8,11 @@
   grid-template-columns: 2fr 3fr;
 }
 
-h1 {
+.about-heading {
   color: #f3f6fc;
   margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.4rem;
   position: absolute;
   width: 100%;
   bottom: 75px;

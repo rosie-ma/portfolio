@@ -1,4 +1,4 @@
-<h1>Experience</h1>
+<p class="experience-heading">Experience</p>
 <div class="timeline">
   @for (experience of experiences; track experience.year) {
     <div class="timeline-item">
@@ -7,13 +7,13 @@
         <div class="timeline-line"></div>
       }
       <div class="timeline-content">
-        <h3 class="timeline-year">{{ experience.year }}</h3>
-        <h4 class="timeline-title">{{ experience.title }} - {{ experience.company }}</h4>
+        <p class="timeline-year">{{ experience.year }}</p>
+        <p class="timeline-title">{{ experience.title }} - {{ experience.company }}</p>
         <p class="timeline-description">{{ experience.description }}</p>
         @if (experience.projectItems?.length) {
           @for (projectItem of experience.projectItems; track projectItem) {
             <div class="project-item-container">
-              <h4 class="project-heading">{{ projectItem['projectItemHead'] }}</h4>
+              <p class="project-heading">{{ projectItem['projectItemHead'] }}</p>
               <p class="timeline-description project-info">{{ projectItem['projectInfo'] }}</p>
             </div>
           }

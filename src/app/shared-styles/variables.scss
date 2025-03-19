@@ -4,7 +4,8 @@
   --background-header: 243, 246, 252;
   --primary: #27233e;
   --secondary: #c0b4ca;
-  --accent: #8375ce;
+  --accent: #6659a8;
+  --code-color: #e88e6a;
 }
 
 [data-theme="dark"] {
@@ -14,6 +15,7 @@
   --primary: #c5c1dc;
   --secondary: #41354b;
   --accent: #dea3ff;
+  --code-color: #bb1515;
 }
 
 $background-color: var(--background);
@@ -22,3 +24,4 @@ $text-color: var(--text);
 $primary-color: var(--primary);
 $secondary-color: var(--secondary);
 $accent-color: var(--accent);
+$code-color: var(--code-color)
