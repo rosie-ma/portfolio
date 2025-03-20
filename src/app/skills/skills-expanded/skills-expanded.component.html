@@ -1,12 +1,14 @@
 <div class="icon-list">
   @for (skill of skills; track skill) {
+    <a href="#skill-description">
     <div class="icon-item" (click)="selectSkill(skill)">
       <img [src]="skill.icon" [alt]="skill.name" class="icon"/>
       <span class="skill-name">{{ skill.name }}</span>
     </div>
+    </a>
   }
 </div>
-<div class="code-editor">
+<div id="skill-description" class="code-editor">
   <div class="action-header">
     <span class="dot red"></span>
     <span class="dot yellow"></span>

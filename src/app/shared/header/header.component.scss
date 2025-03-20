@@ -92,6 +92,10 @@ nav {
 }
 
 @media (max-width: 768px) {
+  .logo a {
+    font-size: 1.5rem;
+  }
+
   .hamburger {
     display: flex;
   }
