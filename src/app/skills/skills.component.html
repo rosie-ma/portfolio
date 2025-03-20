@@ -1,4 +1,4 @@
-<h2 class="skills-heading">Skills</h2>
+<h2 class="skills-heading">&lt;Skills /&gt;</h2>
 <div
   class="slider-container"
   [class.invisible]="isComponentVisible"
@@ -35,7 +35,7 @@
     }
   </div>
 </div>
-<button class="expand-button" (click)="toggleComponent()">
+<button class="expand-button" aria-label="Expand skill description section" (click)="toggleComponent()">
   @if (isComponentVisible) {
     Hide skills information
     <i class="fa-solid fa-chevron-up"></i>

@@ -9,21 +9,22 @@
   <h2 class="contact-title">Get In Touch</h2>
   <div class="contact-info">
     <div class="contact-item">
-      <i class="fa-solid fa-envelope"></i>
+      <i class="fa-solid fa-envelope" aria-label="email connect"></i>
       <a href="mailto:rosiemanukyan98@gmail.com"><p>{{ contactInfo.email }}</p></a>
     </div>
     <div class="contact-item">
-      <i class="fa-solid fa-phone"></i>
+      <i class="fa-solid fa-phone" aria-label="phone connect"></i>
       <p>{{ contactInfo.phone }}</p>
     </div>
-    <div class="contact-item">
-      <i class="fa-solid fa-map-marker-alt"></i>
+    <div class="contact-item" >
+      <i class="fa-solid fa-map-marker-alt" aria-label="address connect"></i>
       <p>{{ contactInfo.address }}</p>
     </div>
   </div>
   <div class="social-media">
     <div class="social-links">
-      <a [href]="contactInfo.socialMedia.linkedin"
+      <a
+        [href]="contactInfo.socialMedia.linkedin"
          target="_blank"
          rel="noopener noreferrer"
          aria-label="Contact Linkedin"
