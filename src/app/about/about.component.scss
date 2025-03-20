@@ -123,6 +123,10 @@ svg {
   :host {
     grid-template-columns: unset;
   }
+
+  .language-skills {
+    grid-column: 1;
+  }
 }
 
 @media (max-width: 1100px) {
