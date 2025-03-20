@@ -4,10 +4,10 @@
   display: grid;
   align-items: center;
   justify-content: center;
-  gap: 1em;
 }
+
 .skills-heading {
-  margin: 0 auto 3rem auto;
+  margin: 0 auto 2rem auto;
 }
 
 .skills-heading {
@@ -26,6 +26,12 @@
   overflow: hidden;
   position: relative;
   white-space: nowrap;
+  max-height: 400px;
+  transition: max-height 0.5s ease-in-out; // Smooth transition for height
+
+  &.invisible {
+    max-height: 0;
+  }
 }
 
 .slider-track {
@@ -80,11 +86,62 @@
   visibility: visible;
 }
 
+.expand-button {
+  padding: 1rem 2rem 1rem 2rem;
+  background-color: transparent;
+  color: $text-color;
+  border: none;
+  cursor: pointer;
+  display: grid;
+  margin-bottom: 1rem;
+  font-weight: 500;
+
+  i {
+    font-size: 1.7rem;
+    animation: chevron 2.5s infinite ease-in-out;
+  }
+
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.expand-container {
+  max-height: 0; // Start with zero height
+  overflow: hidden; // Hide overflow during transition
+  transition: max-height 0.5s ease-in-out; // Smooth transition for height
+
+  &.visible {
+    max-height: 600px; // Set a max height large enough to fit the content
+  }
+}
+
 @keyframes slide {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes chevron {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .expand-container.visible {
+    max-height: 1000px;
   }
 }

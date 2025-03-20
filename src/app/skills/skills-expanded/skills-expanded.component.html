@@ -1,0 +1,24 @@
+<div class="icon-list">
+  @for (skill of skills; track skill) {
+    <div class="icon-item" (click)="selectSkill(skill)">
+      <img [src]="skill.icon" [alt]="skill.name" class="icon"/>
+      <span class="skill-name">{{ skill.name }}</span>
+    </div>
+  }
+</div>
+<div class="code-editor">
+  <div class="action-header">
+    <span class="dot red"></span>
+    <span class="dot yellow"></span>
+    <span class="dot green"></span>
+  </div>
+  <div class="code">
+    @if (selectedSkill) {
+      <span class="keyword">{{ selectedSkill.name }}<span class="operator"> = &#123;</span></span>
+      <span class="string">{{ typedDescription }}</span>
+      <span class="operator">&#125;</span>
+    } @else {
+      <span class="string">Select a skill to view its information.</span>
+    }
+  </div>
+</div>

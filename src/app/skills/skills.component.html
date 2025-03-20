@@ -1,6 +1,7 @@
 <h2 class="skills-heading">Skills</h2>
 <div
   class="slider-container"
+  [class.invisible]="isComponentVisible"
   (mouseenter)="onHover()"
   (mouseleave)="onLeave()"
 >
@@ -33,4 +34,17 @@
       </div>
     }
   </div>
+</div>
+<button class="expand-button" (click)="toggleComponent()">
+  @if (isComponentVisible) {
+    Hide skills information
+    <i class="fa-solid fa-chevron-up"></i>
+  } @else {
+    Expand skills information
+    <i class="fa-solid fa-chevron-down"></i>
+  }
+</button>
+
+<div class="expand-container" [class.visible]="isComponentVisible">
+  <app-skills-expanded/>
 </div>

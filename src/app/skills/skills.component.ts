@@ -1,12 +1,18 @@
 import {Component} from '@angular/core';
+import {SkillsExpandedComponent} from './skills-expanded/skills-expanded.component';
 
 @Component({
   standalone: true,
   selector: 'app-skills',
   templateUrl: './skills.component.html',
+  imports: [
+    SkillsExpandedComponent
+  ],
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
+  isComponentVisible: boolean = false;
+
   skills = [
     {name: 'HTML', icon: 'assets/icons/html.svg', experience: '7 years'},
     {name: 'CSS', icon: 'assets/icons/css.svg', experience: '7 years'},
@@ -25,6 +31,10 @@ export class SkillsComponent {
 
   onHover(): void {
     this.isHovered = true;
+  }
+
+  toggleComponent(): void {
+    this.isComponentVisible = !this.isComponentVisible;
   }
 
   onLeave(): void {

@@ -1,0 +1,129 @@
+@import "../../shared-styles/variables";
+
+:host {
+  display: flex;
+  transition: height 2s;
+  gap: 3rem;
+}
+
+.icon-list {
+  display: grid;
+  width: 50%;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  background-color: $background-color;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: .5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: $background-color;
+  box-shadow: rgba(134, 151, 168, .1) 0 4px 8px;
+  border-radius: 15px;
+  width: 100px;
+
+  &:hover {
+    background-color: $primary-color;
+    color: $secondary-color;
+  }
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.skill-info {
+  h2 {
+    margin-top: 0;
+    color: #333;
+  }
+
+  .description {
+    color: #666;
+  }
+}
+
+.no-skill {
+  color: #999;
+  font-style: italic;
+}
+
+
+.code-editor {
+  background-color: $primary-color;
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 500px;
+  min-height: 300px;
+  width: 100%;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+  flex: 1;
+  padding: 20px;
+
+  .action-header {
+    background-color: $primary-color;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 6px;
+
+      &.red {
+        background-color: #ff5f56;
+      }
+
+      &.yellow {
+        background-color: #ffbd2e;
+      }
+
+      &.green {
+        background-color: #27c93f;
+      }
+    }
+  }
+
+  .code {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    color: $secondary-color;
+
+    .keyword {
+      font-size: 1.2rem;
+      color: #569cd6;
+    }
+
+    .string {
+      color: $code-color;
+      margin-left: 1rem;
+    }
+
+    .operator {
+      font-size: 1.2rem;
+      color: #d4d4d4;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  :host {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon-list {
+    width: 100%;
+  }
+}
