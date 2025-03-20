@@ -88,10 +88,18 @@
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+
+  i {
+    transition: color .5s;
+  }
 }
 
 .gradient-button:hover {
   background: linear-gradient(90deg, #8375ce, #dea3ff);
+
+  i {
+    color: $accent-color;
+  }
 }
 
 .about-me-container {
