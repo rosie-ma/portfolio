@@ -26,11 +26,12 @@ export class AdditionalSkillsComponent implements AfterViewInit {
   ];
 
   softSkills: string[] = [
-    'Code Optimization',
-    'Cross-Browser Testing',
-    'Browser Developer Tools',
-    'Responsive Design',
-    'Web Performance Optimization',
+    'Attention to Detail',
+    'Adaptability & Willingness to Learn',
+    'Time management',
+    'Task Prioritization',
+    'Team Collaboration',
+    'Client Communication',
   ];
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {
