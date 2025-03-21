@@ -1,0 +1,126 @@
+@import "../../shared-styles/variables";
+
+.additional-skills-section {
+  padding: 0 2rem;
+  text-align: center;
+
+  .additional-skills-heading {
+    margin-top: 3rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: $primary-color;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+  }
+
+  .skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(239px, 1fr));
+    justify-items: center;
+    gap: 2rem;
+    margin: 0 auto;
+
+    .skill-group {
+      text-align: left;
+      width: max-content;
+
+      h3 {
+        font-size: 1.1rem;
+        font-weight: 400;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 8px;
+        cursor: default;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 20%;
+          height: 1px;
+          background: linear-gradient(to right, #8375ce, #dea3ff);
+          transition: width 0.3s ease;
+        }
+
+        &:hover:after {
+          width: 100%;
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          font-size: .9rem;
+          line-height: 2;
+          padding: 3px 0;
+          opacity: 0;
+          transform: translateY(20px);
+          transition: color .3s ease, transform .3s ease;
+
+          &:before {
+            content: "-";
+            color: $accent-color;
+            margin-right: 10px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  &.is-visible {
+    .skill-group ul li {
+      cursor: default;
+      opacity: 1;
+      transform: translateY(0);
+      animation: fadeInUp 1s ease forwards;
+
+      &:hover {
+        color: $secondary-color;
+      }
+
+      &:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+
+      &:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+
+      &:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+
+      &:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+
+      &:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+    }
+  }
+
+  @media (max-width: 760px) {
+    .skills-wrapper {
+      justify-items: baseline;
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,12 +1,14 @@
 import {Component} from '@angular/core';
 import {SkillsExpandedComponent} from './skills-expanded/skills-expanded.component';
+import {AdditionalSkillsComponent} from './soft-skills/additional-skills.component';
 
 @Component({
   standalone: true,
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   imports: [
-    SkillsExpandedComponent
+    SkillsExpandedComponent,
+    AdditionalSkillsComponent,
   ],
   styleUrl: './skills.component.scss'
 })

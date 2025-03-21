@@ -37,10 +37,8 @@
 </div>
 <button class="expand-button" aria-label="Expand skill description section" (click)="toggleComponent()">
   @if (isComponentVisible) {
-    Hide skills information
     <i class="fa-solid fa-chevron-up"></i>
   } @else {
-    Expand skills information
     <i class="fa-solid fa-chevron-down"></i>
   }
 </button>
@@ -48,3 +46,5 @@
 <div class="expand-container" [class.visible]="isComponentVisible">
   <app-skills-expanded/>
 </div>
+
+<app-additional-skills />
